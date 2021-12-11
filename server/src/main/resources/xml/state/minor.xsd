@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:minor="https://www.businnes.by/archive/state/xml/minor"
+            targetNamespace="https://www.businnes.by/archive/state/xml/minor">
+
+    <xsd:complexType name="contacts">
+        <xsd:all>
+            <xsd:element name="email" type="minor:email"/>
+            <xsd:element name="phone" type="minor:phone"/>
+            <xsd:element name="contactLinks" type="minor:contactLinks" minOccurs="0"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="contactLinks">
+        <xsd:sequence>
+            <xsd:element name="link" type="xsd:anyURI" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="position">
+        <xsd:attributeGroup ref="minor:positionInfo"/>
+    </xsd:complexType>
+
+    <xsd:attributeGroup name="personInfo">
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="firstName" type="xsd:string" use="required"/>
+        <xsd:attribute name="lastName" type="xsd:string" use="required"/>
+        <xsd:attribute name="gender" type="minor:gender" use="required"/>
+        <xsd:attribute name="birthDate" type="xsd:date" use="required"/>
+    </xsd:attributeGroup>
+
+    <xsd:attributeGroup name="positionInfo">
+        <xsd:attribute name="division" type="xsd:string" use="required"/>
+        <xsd:attribute name="title" type="xsd:string" use="required"/>
+    </xsd:attributeGroup>
+
+    <xsd:simpleType name="gender">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Male"/>
+            <xsd:enumeration value="Female"/>
+            <xsd:enumeration value="Not applicable"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="email">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([_\-.]?[A-Za-z0-9]+)+@[A-Za-z0-9-]+\.[a-z]{2,}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="phone">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(\+|00)[1-9]\d{1,14}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

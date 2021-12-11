@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:major="https://www.businnes.by/archive/state/xml/schema"
+            xmlns:types="https://www.businnes.by/archive/state/xml/types"
+            targetNamespace="https://www.businnes.by/archive/state/xml/schema">
+    <xsd:import namespace="https://www.businnes.by/archive/state/xml/types" schemaLocation="types.xsd"/>
+
+    <xsd:element name="files" type="major:files"/>
+
+    <xsd:complexType name="files">
+        <xsd:annotation>
+            <xsd:documentation>Personnel Files</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="file" type="types:file" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

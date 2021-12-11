@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:minor="https://www.businnes.by/archive/state/xml/minor"
+            targetNamespace="https://www.businnes.by/archive/state/xml/types">
+    <xsd:import namespace="https://www.businnes.by/archive/state/xml/minor" schemaLocation="minor.xsd"/>
+
+    <xsd:complexType name="file">
+        <xsd:annotation>
+            <xsd:documentation>Personnel File</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="position" type="minor:position"/>
+            <xsd:element name="contacts" type="minor:contacts"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="minor:personInfo"/>
+    </xsd:complexType>
+</xsd:schema>
