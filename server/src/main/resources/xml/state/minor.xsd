@@ -4,11 +4,11 @@
             targetNamespace="https://www.businnes.by/archive/state/xml/minor">
 
     <xsd:complexType name="contacts">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element name="email" type="minor:email"/>
             <xsd:element name="phone" type="minor:phone"/>
             <xsd:element name="contactLinks" type="minor:contactLinks" minOccurs="0"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="contactLinks">
@@ -38,7 +38,7 @@
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="Male"/>
             <xsd:enumeration value="Female"/>
-            <xsd:enumeration value="Not applicable"/>
+            <xsd:enumeration value="Other"/>
         </xsd:restriction>
     </xsd:simpleType>
 

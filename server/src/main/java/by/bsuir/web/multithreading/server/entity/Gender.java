@@ -14,7 +14,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;enumeration value="Male"/&gt;
  *     &lt;enumeration value="Female"/&gt;
- *     &lt;enumeration value="Not applicable"/&gt;
+ *     &lt;enumeration value="Other"/&gt;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
@@ -27,21 +27,21 @@ public enum Gender {
     MALE("Male"),
     @XmlEnumValue("Female")
     FEMALE("Female"),
-    @XmlEnumValue("Not applicable")
-    NOT_APPLICABLE("Not applicable");
+    @XmlEnumValue("Other")
+    OTHER("Other");
     private final String value;
 
     Gender(String v) {
         value = v;
     }
 
-    public static Gender fromValue(String v) {
+    public static Gender fromValue(String value) throws IllegalArgumentException {
         for (Gender c : Gender.values()) {
-            if (c.value.equals(v)) {
+            if (c.value.equalsIgnoreCase(value)) {
                 return c;
             }
         }
-        throw new IllegalArgumentException(v);
+        throw new IllegalArgumentException(value);
     }
 
     public String value() {
