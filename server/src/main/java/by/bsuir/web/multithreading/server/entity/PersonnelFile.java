@@ -12,11 +12,11 @@ import java.time.LocalDate;
 
 /**
  * Personnel File
- * 
+ *
  * <p>Java class for file complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="file"&gt;
  *   &lt;complexContent&gt;
@@ -30,13 +30,11 @@ import java.time.LocalDate;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "file", propOrder = {
-    "position",
-    "contacts"
+        "position",
+        "contacts"
 })
 public class PersonnelFile {
 
@@ -58,9 +56,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the position property.
-     * 
+     *
      * @return possible object is {@link Position }
-     *     
      */
     public Position getPosition() {
         return position;
@@ -68,9 +65,8 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the position property.
-     * 
+     *
      * @param value allowed object is {@link Position }
-     *     
      */
     public void setPosition(Position value) {
         this.position = value;
@@ -78,9 +74,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the contacts property.
-     * 
+     *
      * @return possible object is {@link Contacts }
-     *     
      */
     public Contacts getContacts() {
         return contacts;
@@ -88,9 +83,8 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the contacts property.
-     * 
+     *
      * @param value allowed object is {@link Contacts }
-     *     
      */
     public void setContacts(Contacts value) {
         this.contacts = value;
@@ -98,7 +92,6 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the id property.
-     * 
      */
     public int getId() {
         return id;
@@ -106,7 +99,6 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the id property.
-     * 
      */
     public void setId(int value) {
         this.id = value;
@@ -114,9 +106,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the firstName property.
-     * 
+     *
      * @return possible object is {@link String }
-     *     
      */
     public String getFirstName() {
         return firstName;
@@ -124,9 +115,8 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the firstName property.
-     * 
+     *
      * @param value allowed object is {@link String }
-     *     
      */
     public void setFirstName(String value) {
         this.firstName = value;
@@ -134,9 +124,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the lastName property.
-     * 
+     *
      * @return possible object is {@link String }
-     *     
      */
     public String getLastName() {
         return lastName;
@@ -144,9 +133,8 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the lastName property.
-     * 
+     *
      * @param value allowed object is {@link String }
-     *     
      */
     public void setLastName(String value) {
         this.lastName = value;
@@ -154,9 +142,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the gender property.
-     * 
+     *
      * @return possible object is {@link Gender }
-     *     
      */
     public Gender getGender() {
         return gender;
@@ -164,9 +151,8 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the gender property.
-     * 
+     *
      * @param value allowed object is {@link Gender }
-     *     
      */
     public void setGender(Gender value) {
         this.gender = value;
@@ -174,9 +160,8 @@ public class PersonnelFile {
 
     /**
      * Gets the value of the birthDate property.
-     * 
+     *
      * @return possible object is {@link LocalDate }
-     *     
      */
     public LocalDate getBirthDate() {
         return birthDate;
@@ -184,12 +169,10 @@ public class PersonnelFile {
 
     /**
      * Sets the value of the birthDate property.
-     * 
+     *
      * @param value allowed object is {@link LocalDate }
-     *     
      */
     public void setBirthDate(LocalDate value) {
         this.birthDate = value;
     }
-
 }
