@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>by.bsuir.java</groupId>
-    <artifactId>bsuir-java-web-multithreading-client</artifactId>
+    <groupId>by.bsuir.web</groupId>
+    <artifactId>java-web-multithreading-server</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -49,6 +49,12 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>by.bsuir.web</groupId>
+            <artifactId>java-web-multithreading-common</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
